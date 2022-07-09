@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
 
@@ -8,10 +10,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sprin | Courses and Events HTML Template</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png" >
+  <link rel="shortcut icon" type="image/png" href="{% static "img/favicon.png %}" >
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css" />
-  <script src="js/uikit.js"></script>
+  <link rel="stylesheet" href="{% static "css/main.css" %}" />
+  <script src="{% static "js/uikit.js" %}"></script>
 </head>
 
 <body >
@@ -62,7 +64,7 @@
 	<div class="uk-container uk-container-large">
 		<div class="uk-box-shadow-small uk-overflow-hidden uk-border-rounded uk-inline uk-background-center-center 
 		uk-background-cover uk-background-norepeat uk-background-blend-overlay uk-overlay-blend" 
-		style="background-image: url(img/5.jpg);">
+		style="background-image: url({% static "img/5.jpg" %});">
 			<div class="uk-padding-large uk-margin-bottom">
 				<div data-uk-grid>
 					<div class="uk-width-expand@m uk-flex uk-flex-middle uk-light">
