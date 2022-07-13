@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from main_app import urls as main_app_urls
+from accounts import urls as accounts_urls
 from main_app.views import index
 from django.conf import settings
 from django.conf.urls.static import static
@@ -29,5 +30,6 @@ urlpatterns = [
 ]
 
 urlpatterns += main_app_urls.urlpatterns
+urlpatterns += accounts_urls.urlpatterns
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

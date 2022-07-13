@@ -20,8 +20,3 @@ def events(request):
 def search(request):
     return render(request, 'main_app/search.html', {})
 
-def signin(request):
-    return render(request, 'main_app/sign-in.html', {})
-
-def signup(request):
-    return render(request, 'main_app/sign-up.html',{})

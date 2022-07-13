@@ -24,11 +24,11 @@
 	    <div class="uk-container">
 	      <div class="uk-position-z-index" data-uk-navbar>
 	        <div class="uk-navbar-left">
-	          <a class="uk-navbar-item uk-logo" href="index-2.html">Sprin</a>
+	          <a class="uk-navbar-item uk-logo" href="{% url 'index2' %}">Sprin</a>
 	        </div>
 	        <div class="uk-navbar-right">
 	          <ul class="uk-navbar-nav uk-visible@m" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80">
-	            <li ><a href="index-2.html">Courses</a></li>
+	            <li ><a href="{% url 'index2' %}">Courses</a></li>
 	            <li ><a href="events.html">Events</a></li>
 	            <li >
 	              <a href="#">Pages</a>
@@ -38,7 +38,7 @@
 	                  <li ><a href="event.html">Event</a></li>
 	                  <li ><a href="search.html">Search</a></li>
 	                  <li ><a href="sign-in.html">Sign In</a></li>
-	                  <li ><a href="sign-up.html">Sign Up</a></li>
+	                  <li ><a href="{% url 'sign-up' %}">Sign Up</a></li>
 	                </ul>
 	              </div>            
 	            </li>
@@ -52,7 +52,7 @@
 	            </div>
 	          </div>
 	          <div class="uk-navbar-item">
-	            <div><a class="uk-button uk-button-primary-light" href="sign-up.html">Sign Up</a></div>
+	            <div><a class="uk-button uk-button-primary-light" href="{% url 'sign-up' %}">Sign Up</a></div>
 	          </div>          
 	          <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span
 	            data-uk-navbar-toggle-icon></span></a>
@@ -69,7 +69,7 @@
 				<div data-uk-grid>
 					<div class="uk-width-expand@m uk-flex uk-flex-middle uk-light">
 						<div>
-							<a class="uk-text-demi-bold hvr-back" href="index-2.html"><span class="uk-margin-small-right" 
+							<a class="uk-text-demi-bold hvr-back" href="{% url 'index2' %}"><span class="uk-margin-small-right" 
 								data-uk-icon="icon: arrow-left; ratio: 1.4"></span>Back</a>
 							<h1 class="uk-heading-small uk-letter-spacing-medium">User Experience Design Fundamentals For Beginners</h1>
 							<p class="uk-margin-small-bottom">Design Web Sites and Mobile Apps that Your Users Love and Return to Again and Again with UX Expert Tom Solender.</p>
@@ -651,16 +651,16 @@
     <a class="uk-logo" href="index-2.html">Sprin</a>
     <button class="uk-offcanvas-close" type="button" data-uk-close="ratio: 1.2"></button>
     <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-medium-top uk-text-center">
-      <li ><a href="index-2.html">Courses</a></li>
+      <li ><a href="{% url 'index2' %}">Courses</a></li>
       <li ><a href="events.html">Events</a></li>
       <li class="uk-active"><a href="course.html">Course</a></li>
       <li ><a href="event.html">Event</a></li>
       <li ><a href="search.html">Search</a></li>
       <li ><a href="sign-in.html">Sign In</a></li>
-      <li ><a href="sign-up.html">Sign Up</a></li>
+      <li ><a href="{% url 'sign-up' %}">Sign Up</a></li>
     </ul>
     <div class="uk-margin-medium-top">
-      <a class="uk-button uk-width-1-1 uk-button-primary-light" href="sign-up.html">Sign Up</a>
+      <a class="uk-button uk-width-1-1 uk-button-primary-light" href="{% url 'sign-up' %}">Sign Up</a>
     </div>
     <div class="uk-margin-medium-top uk-text-center">
       <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center">

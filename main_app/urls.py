@@ -9,7 +9,5 @@ urlpatterns = [
     path('event/',views.event ,name='event'),
     path('events/',views.events ,name='events'),
     path('search/',views.search ,name='search'),
-    path('sign-in/',views.signin ,name='sign-in'),
-    path('sign-up/',views.signup ,name='sign-up'),
 
 ]
