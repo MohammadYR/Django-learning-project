@@ -41,7 +41,8 @@
       <div class="uk-text-center uk-margin">
         <p class="uk-margin-remove">Or use your email for registration:</p>
       </div>
-      <form>
+      <form class="form-signin" method="post" action="{% url 'sign-up' %}">
+        {% csrf_token %}
         <div class="uk-width-1-1 uk-margin">
           <label class="uk-form-label" for="name">Full name</label>
           <input id="name" class="uk-input uk-form-large" type="text" placeholder="Tom Atkins">

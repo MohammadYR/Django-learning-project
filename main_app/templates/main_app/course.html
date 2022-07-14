@@ -35,9 +35,9 @@
 	              <div class="uk-navbar-dropdown">
 	                <ul class="uk-nav uk-navbar-dropdown-nav">
 	                  <li class="uk-active"><a href="course.html">Course</a></li>
-	                  <li ><a href="event.html">Event</a></li>
-	                  <li ><a href="search.html">Search</a></li>
-	                  <li ><a href="sign-in.html">Sign In</a></li>
+	                  <li ><a href="{% url 'event' %}">Event</a></li>
+	                  <li ><a href="{% url 'search' %}">Search</a></li>
+	                  <li ><a href="{% url 'sign-in' %}">Sign In</a></li>
 	                  <li ><a href="{% url 'sign-up' %}">Sign Up</a></li>
 	                </ul>
 	              </div>            
@@ -428,7 +428,7 @@
               <span>(324)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -456,7 +456,7 @@
               <span>(6,650)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -484,7 +484,7 @@
               <span>(6,650)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -540,7 +540,7 @@
               <span>(6,650)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -568,7 +568,7 @@
               <span>(1,834)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
     </div>
