@@ -9,12 +9,15 @@ class Course(models.Model):
     picture = models.ImageField(
         upload_to='profile_picture',
         default='profile_picture/default.jpg')
+    # video = models.FileField(upload_to='profile_video')
+    cost = models.IntegerField()
     title = models.CharField(max_length=200)
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(user,on_delete=models.CASCADE)
     likes = models.ManyToManyField(user, related_name="Course_likes", blank=True)
-    
+    description = models.TextField()
+    requirements = models.TextField()
     
     def __str__(self) -> str:
         return f"{self.title}|{self.body[:20]}"
