@@ -7,7 +7,7 @@ user = get_user_model()
 
 class Course(models.Model):
     picture = models.ImageField(
-        upload_to='profile_picture',
+        upload_to='course_picture',
         default='profile_picture/default.jpg')
     # video = models.FileField(upload_to='profile_video')
     cost = models.IntegerField()
