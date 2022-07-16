@@ -24,21 +24,21 @@
 	    <div class="uk-container">
 	      <div class="uk-position-z-index" data-uk-navbar>
 	        <div class="uk-navbar-left">
-	          <a class="uk-navbar-item uk-logo" href="index-2.html">Sprin</a>
+	          <a class="uk-navbar-item uk-logo" href="{% url 'index2' %}">Sprin</a>
 	        </div>
 	        <div class="uk-navbar-right">
 	          <ul class="uk-navbar-nav uk-visible@m" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80">
-	            <li class="uk-active"><a href="index-2.html">Courses</a></li>
-	            <li ><a href="events.html">Events</a></li>
+	            <li class="uk-active"><a href="{% url 'index2' %}">Courses</a></li>
+	            <li ><a href="{% url 'events' %}">Events</a></li>
 	            <li >
 	              <a href="#">Pages</a>
 	              <div class="uk-navbar-dropdown">
 	                <ul class="uk-nav uk-navbar-dropdown-nav">
-	                  <li ><a href="course.html">Course</a></li>
-	                  <li ><a href="event.html">Event</a></li>
-	                  <li ><a href="search.html">Search</a></li>
-	                  <li ><a href="sign-in.html">Sign In</a></li>
-	                  <li ><a href="sign-up.html">Sign Up</a></li>
+	                  <li ><a href="{% url 'course' %}">Course</a></li>
+	                  <li ><a href="{% url 'event' %}">Event</a></li>
+	                  <li ><a href="{% url 'search' %}">Search</a></li>
+	                  <li ><a href="{% url 'sign-in' %}">Sign In</a></li>
+	                  <li ><a href="{% url 'sign-up' %}">Sign Up</a></li>
 	                </ul>
 	              </div>            
 	            </li>
@@ -52,7 +52,7 @@
 	            </div>
 	          </div>
 	          <div class="uk-navbar-item">
-	            <div><a class="uk-button uk-button-primary-light" href="sign-up.html">Sign Up</a></div>
+	            <div><a class="uk-button uk-button-primary-light" href="{% url 'sign-up' %}">Sign Up</a></div>
 	          </div>          
 	          <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span
 	            data-uk-navbar-toggle-icon></span></a>
@@ -71,7 +71,7 @@
 						<div class="uk-width-3-4@m">
 							<h2 class="uk-heading-medium uk-letter-spacing-medium">Start a New Career Begin Today</h2>
 							<p>
-								<a class="hvr-forward" href="course.html" data-uk-icon="icon: arrow-right">UX Design with Josh Alkin</a>
+								<a class="hvr-forward" href="{% url 'course' %}" data-uk-icon="icon: arrow-right">UX Design with Josh Alkin</a>
 							</p>
 						</div>
 					</div>
@@ -82,7 +82,7 @@
 						<div class="uk-width-1-2@m">
 							<h1 class="uk-heading-medium uk-letter-spacing-medium">Learn New Skills & Hobbies</h1>
 							<p>
-								<a class="hvr-forward" href="course.html" data-uk-icon="icon: arrow-right">Outdoor Photography with Josh Alkin</a>
+								<a class="hvr-forward" href="{% url 'course' %}" data-uk-icon="icon: arrow-right">Outdoor Photography with Josh Alkin</a>
 							</p>
 						</div>
 					</div>
@@ -187,7 +187,7 @@
               <span>(324)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -215,7 +215,7 @@
               <span>(6,650)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -243,7 +243,7 @@
               <span>(6,650)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -271,7 +271,7 @@
               <span>(2,350)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -299,7 +299,7 @@
               <span>(6,650)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -327,7 +327,7 @@
               <span>(1,834)</span>
             </div>
           </div>
-          <a href="course.html" class="uk-position-cover"></a>
+          <a href="{% url 'course' %}" class="uk-position-cover"></a>
         </div>
       </div>
     </div>
@@ -410,19 +410,19 @@
 
 <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
   <div class="uk-offcanvas-bar">
-    <a class="uk-logo" href="index-2.html">Sprin</a>
+    <a class="uk-logo" href="{% url 'index2' %}">Sprin</a>
     <button class="uk-offcanvas-close" type="button" data-uk-close="ratio: 1.2"></button>
     <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-medium-top uk-text-center">
-      <li class="uk-active"><a href="index-2.html">Courses</a></li>
-      <li ><a href="events.html">Events</a></li>
-      <li ><a href="course.html">Course</a></li>
-      <li ><a href="event.html">Event</a></li>
-      <li ><a href="search.html">Search</a></li>
-      <li ><a href="sign-in.html">Sign In</a></li>
-      <li ><a href="sign-up.html">Sign Up</a></li>
+      <li class="uk-active"><a href="{% url 'index2' %}">Courses</a></li>
+      <li ><a href="{% url 'events' %}">Events</a></li>
+      <li ><a href="{% url 'course' %}">Course</a></li>
+      <li ><a href="{% url 'event' %}">Event</a></li>
+      <li ><a href="{% url 'search' %}">Search</a></li>
+      <li ><a href="{% url 'sign-in' %}">Sign In</a></li>
+      <li ><a href="{% url 'sign-up' %}">Sign Up</a></li>
     </ul>
     <div class="uk-margin-medium-top">
-      <a class="uk-button uk-width-1-1 uk-button-primary-light" href="sign-up.html">Sign Up</a>
+      <a class="uk-button uk-width-1-1 uk-button-primary-light" href="{% url 'sign-up' %}">Sign Up</a>
     </div>
     <div class="uk-margin-medium-top uk-text-center">
       <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center">

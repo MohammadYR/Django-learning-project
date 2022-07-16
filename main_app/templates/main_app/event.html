@@ -22,32 +22,32 @@
           <div class="uk-container">
             <div class="uk-position-z-index" data-uk-navbar>
               <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="index-2.html">Sprin</a>
+                <a class="uk-navbar-item uk-logo" href="{% url 'index2' %}">Sprin</a>
               </div>
               <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-visible@m"
                     data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80">
                   <li >
-                    <a href="index-2.html">Courses</a>
+                    <a href="{% url 'index2' %}">Courses</a>
                   </li>
                   <li >
-                    <a href="events.html">Events</a>
+                    <a href="{% url 'events' %}">Events</a>
                   </li>
                   <li >
                     <a href="#">Pages</a>
                     <div class="uk-navbar-dropdown">
                       <ul class="uk-nav uk-navbar-dropdown-nav">
                         <li >
-                          <a href="course.html">Course</a>
+                          <a href="{% url 'course' %}">Course</a>
                         </li>
                         <li class="uk-active">
-                          <a href="event.html">Event</a>
+                          <a href="{% url 'event' %}">Event</a>
                         </li>
                         <li >
-                          <a href="search.html">Search</a>
+                          <a href="{% url 'search' %}">Search</a>
                         </li>
                         <li >
-                          <a href="sign-in.html">Sign In</a>
+                          <a href="{% url 'sign-in' %}">Sign In</a>
                         </li>
                         <li >
                           <a href="{% url 'sign-up' %}">Sign Up</a>
@@ -86,7 +86,7 @@
             <div data-uk-grid>
               <div class="uk-width-expand@m uk-flex uk-flex-middle uk-light">
                 <div>
-                  <a class="uk-text-demi-bold hvr-back" href="events.html"><span class="uk-margin-small-right"
+                  <a class="uk-text-demi-bold hvr-back" href="{% url 'event' %}"><span class="uk-margin-small-right"
       data-uk-icon="icon: arrow-left; ratio: 1.4"></span>Back</a>
                   <h2 class="uk-heading-small uk-letter-spacing-medium">ProductCon The Biggest Product Management Conference</h2>
                   <address>1020 Capital Ave, Peak Hill, San Francisco</address>
@@ -264,7 +264,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -299,7 +299,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -334,7 +334,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -369,7 +369,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -404,7 +404,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -439,7 +439,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
         </div>
@@ -573,27 +573,27 @@
     </footer>
     <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
       <div class="uk-offcanvas-bar">
-        <a class="uk-logo" href="index-2.html">Sprin</a>
+        <a class="uk-logo" href="{% url 'index2' %}">Sprin</a>
         <button class="uk-offcanvas-close" type="button" data-uk-close="ratio: 1.2">
         </button>
         <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-medium-top uk-text-center">
           <li >
-            <a href="index-2.html">Courses</a>
+            <a href="{% url 'index2' %}">Courses</a>
           </li>
           <li >
-            <a href="events.html">Events</a>
+            <a href="{% url 'events' %}">Events</a>
           </li>
           <li >
-            <a href="course.html">Course</a>
+            <a href="{% url 'course' %}">Course</a>
           </li>
           <li class="uk-active">
-            <a href="event.html">Event</a>
+            <a href="{% url 'event' %}">Event</a>
           </li>
           <li >
-            <a href="search.html">Search</a>
+            <a href="{% url 'search' %}">Search</a>
           </li>
           <li >
-            <a href="sign-in.html">Sign In</a>
+            <a href="{% url 'sign-in' %}">Sign In</a>
           </li>
           <li >
             <a href="{% url 'sign-up' %}">Sign Up</a>

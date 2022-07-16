@@ -22,35 +22,35 @@
           <div class="uk-container">
             <div class="uk-position-z-index" data-uk-navbar>
               <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="index-2.html">Sprin</a>
+                <a class="uk-navbar-item uk-logo" href="{% url 'index2' %}">Sprin</a>
               </div>
               <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-visible@m"
                     data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80">
                   <li >
-                    <a href="index-2.html">Courses</a>
+                    <a href="{% url 'index2' %}">Courses</a>
                   </li>
                   <li class="uk-active">
-                    <a href="events.html">Events</a>
+                    <a href="{% url 'events' %}">Events</a>
                   </li>
                   <li >
                     <a href="#">Pages</a>
                     <div class="uk-navbar-dropdown">
                       <ul class="uk-nav uk-navbar-dropdown-nav">
                         <li >
-                          <a href="course.html">Course</a>
+                          <a href="{% url 'course' %}">Course</a>
                         </li>
                         <li >
                           <a href="{% url 'event' %}">Event</a>
                         </li>
                         <li >
-                          <a href="search.html">Search</a>
+                          <a href="{% url 'search' %}">Search</a>
                         </li>
                         <li >
-                          <a href="sign-in.html">Sign In</a>
+                          <a href="{% url 'sign-in' %}">Sign In</a>
                         </li>
                         <li >
-                          <a href="sign-up.html">Sign Up</a>
+                          <a href="{% url 'sign-up' %}">Sign Up</a>
                         </li>
                       </ul>
                     </div>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="uk-navbar-item">
                   <div>
-                    <a class="uk-button uk-button-primary-light" href="sign-up.html">Sign Up</a>
+                    <a class="uk-button uk-button-primary-light" href="{% url 'sign-up' %}">Sign Up</a>
                   </div>
                 </div>
                 <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span data-uk-navbar-toggle-icon></span></a>
@@ -91,7 +91,7 @@
                   <h2 class="uk-heading-medium uk-letter-spacing-medium">Christmas Concerts in New York</h2>
                   <p>
                     <a class="hvr-forward"
-                       href="event.html"
+                       href="{% url 'event' %}"
                        data-uk-icon="icon: arrow-right">Make it an Unforgettable Holiday Season</a>
                   </p>
                 </div>
@@ -104,7 +104,7 @@
                   <h2 class="uk-heading-medium uk-letter-spacing-medium">Product Management Conference</h2>
                   <p>
                     <a class="hvr-forward"
-                       href="event.html"
+                       href="{% url 'event' %}"
                        data-uk-icon="icon: arrow-right">Coming to San Francisco</a>
                   </p>
                 </div>
@@ -248,7 +248,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -283,7 +283,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -318,7 +318,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -353,7 +353,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -388,7 +388,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -423,7 +423,7 @@
                   </div>
                 </div>
               </div>
-              <a href="event.html" class="uk-position-cover"></a>
+              <a href="{% url 'event' %}" class="uk-position-cover"></a>
             </div>
           </div>
         </div>
@@ -568,35 +568,35 @@
     </footer>
     <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
       <div class="uk-offcanvas-bar">
-        <a class="uk-logo" href="index-2.html">Sprin</a>
+        <a class="uk-logo" href="{% url 'index2' %}">Sprin</a>
         <button class="uk-offcanvas-close" type="button" data-uk-close="ratio: 1.2">
         </button>
         <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-medium-top uk-text-center">
           <li >
-            <a href="index-2.html">Courses</a>
+            <a href="{% url 'index2' %}">Courses</a>
           </li>
           <li class="uk-active">
-            <a href="events.html">Events</a>
+            <a href="{% url 'events' %}">Events</a>
           </li>
           <li >
-            <a href="course.html">Course</a>
+            <a href="{% url 'course' %}">Course</a>
           </li>
           <li >
-            <a href="event.html">Event</a>
+            <a href="{% url 'event' %}">Event</a>
           </li>
           <li >
-            <a href="search.html">Search</a>
+            <a href="{% url 'search' %}">Search</a>
           </li>
           <li >
-            <a href="sign-in.html">Sign In</a>
+            <a href="{% url 'sign-in' %}">Sign In</a>
           </li>
           <li >
-            <a href="sign-up.html">Sign Up</a>
+            <a href="{% url 'sign-up' %}">Sign Up</a>
           </li>
         </ul>
         <div class="uk-margin-medium-top">
           <a class="uk-button uk-width-1-1 uk-button-primary-light"
-             href="sign-up.html">Sign Up</a>
+             href="{% url 'sign-up' %}">Sign Up</a>
         </div>
         <div class="uk-margin-medium-top uk-text-center">
           <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center">

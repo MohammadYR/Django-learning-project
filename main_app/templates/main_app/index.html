@@ -24,7 +24,7 @@
           <div class="uk-container">
             <div class="uk-position-z-index" data-uk-navbar>
               <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="index-2.html">Sprin</a>
+                <a class="uk-navbar-item uk-logo" href="{% url 'index2' %}">Sprin</a>
               </div>
               <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-visible@m"
@@ -93,7 +93,7 @@
                   <h2 class="uk-heading-medium uk-letter-spacing-medium">Start a New Career Begin Today</h2>
                   <p>
                     <a class="hvr-forward"
-                       href="course.html"
+                       href="{% url 'course' %}"
                        data-uk-icon="icon: arrow-right">UX Design with Josh Alkin</a>
                   </p>
                 </div>
@@ -106,7 +106,7 @@
                   <h1 class="uk-heading-medium uk-letter-spacing-medium">Learn New Skills & Hobbies</h1>
                   <p>
                     <a class="hvr-forward"
-                       href="course.html"
+                       href="{% url 'course' %}"
                        data-uk-icon="icon: arrow-right">Outdoor Photography with Josh Alkin</a>
                   </p>
                 </div>
@@ -246,7 +246,7 @@
                   <span>(324)</span>
                 </div>
               </div>
-              <a href="course.html" class="uk-position-cover"></a>
+              <a href="{% url 'course' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -282,7 +282,7 @@
                   <span>(6,650)</span>
                 </div>
               </div>
-              <a href="course.html" class="uk-position-cover"></a>
+              <a href="{% url 'course' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -318,7 +318,7 @@
                   <span>(6,650)</span>
                 </div>
               </div>
-              <a href="course.html" class="uk-position-cover"></a>
+              <a href="{% url 'course' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -354,7 +354,7 @@
                   <span>(2,350)</span>
                 </div>
               </div>
-              <a href="course.html" class="uk-position-cover"></a>
+              <a href="{% url 'course' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -390,7 +390,7 @@
                   <span>(6,650)</span>
                 </div>
               </div>
-              <a href="course.html" class="uk-position-cover"></a>
+              <a href="{% url 'course' %}" class="uk-position-cover"></a>
             </div>
           </div>
           <div>
@@ -426,7 +426,7 @@
                   <span>(1,834)</span>
                 </div>
               </div>
-              <a href="course.html" class="uk-position-cover"></a>
+              <a href="{% url 'course' %}" class="uk-position-cover"></a>
             </div>
           </div>
         </div>
@@ -571,12 +571,12 @@
     </footer>
     <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
       <div class="uk-offcanvas-bar">
-        <a class="uk-logo" href="index-2.html">Sprin</a>
+        <a class="uk-logo" href="{% url 'index2' %}">Sprin</a>
         <button class="uk-offcanvas-close" type="button" data-uk-close="ratio: 1.2">
         </button>
         <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-medium-top uk-text-center">
           <li class="uk-active">
-            <a href="index-2.html">Courses</a>
+            <a href="{% url 'index2' %}">Courses</a>
           </li>
           <li >
             <a href="{% url 'events' %}">Events</a>
@@ -591,7 +591,7 @@
             <a href="{% url 'search' %}">Search</a>
           </li>
           <li >
-            <a href="sign-in.html">Sign In</a>
+            <a href="{% url 'sign-in' %}">Sign In</a>
           </li>
           <li >
             <a href="{% url 'sign-up' %}">Sign Up</a>
