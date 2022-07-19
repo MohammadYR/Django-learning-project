@@ -25,4 +25,4 @@ class SocialMedia(models.Model):
     )
     url = models.URLField()
     type = models.CharField(max_length=1, choices=TYPES)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="social_media_set")

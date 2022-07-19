@@ -13,8 +13,8 @@ def index2(request):
     return render(request, 'main_app/index-2.html', {})
 
 @login_required(login_url='/accounts/sign-in/')
-def course(request,id):
-    c= get_object_or_404(Course,id=id)
+def course(request, id):
+    c = get_object_or_404(Course, id=id)
     if request.method == 'POST':
         comment = CommentForm(request.POST)
         if comment.is_valid:
