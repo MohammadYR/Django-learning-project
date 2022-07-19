@@ -15,7 +15,7 @@ class Course(models.Model):
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(user,on_delete=models.CASCADE)
-    likes = models.ManyToManyField(user, related_name="Course_likes", blank=True)
+    likes = models.ManyToManyField(user, related_name="course_likes", blank=True)
     description = models.TextField()
     requirements = models.TextField()
     
@@ -31,3 +31,18 @@ class Comment(models.Model):
 
     def __str__(self) -> str:
         return f"{self.course.title}|{self.body[:40]}"
+    
+class event(models.Model):
+    picture = models.ImageField(
+        upload_to='event_picture',
+        default='event_picture/default.jpg')
+    title = models.CharField(max_length=350)
+    cost = models.IntegerField()
+    date = models.DateTimeField()
+    time = models.TimeField()
+    description = models.TextField()
+    location = models.CharField(max_length=200, null=True, blank=True)
+    tags = models.TextField()
+    parking_instructions = models.TextField()
+    likes = models.ManyToManyField(user, related_name="event_likes", blank=True)
+    
