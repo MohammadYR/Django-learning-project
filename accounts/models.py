@@ -10,10 +10,18 @@ from .managers import CustomUserManager
 # Create your models here.
 class User(AbstractUser):
     # user = models.OneToOneField(User,on_delete=models.CASCADE)
-    fullname = models.CharField(max_length=70)
-    email = models.EmailField()
+    username = None
+    email = models.EmailField('email address', unique=True)
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+    
+    age = models.IntegerField(null=True, blank=True)
+    bio = models.TextField(null=True, blank=True)
+    education = models.TextField(null=True, blank=True)
     objects = CustomUserManager()
     
+     # def __str__(self):
+    #     return self.email
 
     # def get_absolute_url(self):
     #     return reverse("profile", kwargs={"fullname": self.fullname})

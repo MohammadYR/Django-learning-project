@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import Course,Comment
-from .forms import CourseForm,CommentForm
+from .models import Course,Comment,Event
+from .forms import CourseForm,CommentForm,EventForm
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
 # Create your views here.
@@ -24,7 +24,7 @@ def course(request, id):
             comment_object.save()
     
     
-    c = Comment.objects.filter(course=c).order_by('-date')        
+    f = Comment.objects.filter(course=c).order_by('-date')        
     form = CommentForm()
             
     return render(request, 'main_app/course.html', {'course': c ,'comments': f ,'form': form})
@@ -37,18 +37,39 @@ def courses(request):
         form = CourseForm(request.POST)
         if form.is_valid:
             form.save()
-    courses = Post.objects.all().order_by('-date')[:20]
+    courses = course.objects.all().order_by('-date')[:20]
     form = CourseForm()
     return render(request,
                   'main_app/course.html',
                   {"courses": courses,
                    "form": form})
 
-def event(request):
-    return render(request, 'main_app/event.html', {})
+def event(request, id=id):
+    e = get_object_or_404(Event, id=id)
+    if request.method == 'POST':
+        comment = CommentForm(request.POST)
+        if comment.is_valid:
+            comment_object = comment.save(commit=False)
+            comment_object.Event = e
+            comment_object.author = request.user
+            comment_object.save()
+    
+    f = Comment.objects.filter(event=e).order_by('-date')        
+    form = CommentForm()
+            
+    return render(request, 'main_app/course.html', {'event': e ,'comments': f ,'form': form})
 
 def events(request):
-    return render(request, 'main_app/events.html', {})
+    if request.method == "POST":
+        form = EventForm(request.POST)
+        if form.is_valid:
+            form.save()
+    events = Event.objects.all().order_by('-date')[:20]
+    form = EventForm()
+    return render(request,
+                  'main_app/event.html',
+                  {"events": events,
+                   "form": form})
 
 def search(request):
     return render(request, 'main_app/search.html', {})

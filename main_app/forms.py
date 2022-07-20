@@ -1,5 +1,6 @@
 from django import forms
-from .models import Course,Comment
+from .models import Course,Comment,Event
+from django.forms import Widget
 
 # class EmailForm(forms.Form):
 #     pass
@@ -7,21 +8,21 @@ from .models import Course,Comment
 class CourseForm(forms.ModelForm):
     class Meta:
         model = Course
-        fields = ['picture','title','body']
+        fields = '__all__'
         
         
 class CommentForm(forms.ModelForm):
-     class Meta:
-          model=Comment
-          fields = ['body']
-          widgets = {
+    class Meta:
+        model = Comment
+        fields = ['body']
+        widgets = {
             'body': forms.Textarea(attrs={'cols': 10, 'rows': 10,'class':"comment-body"}),
         }
         
     
+class EventForm(forms.ModelForm):
+    class Meta:
+        model = Event
+        fields = '__all__'   
     
     
-    # title = forms.CharField(max_length=20)
-    # body = forms.CharField(max_length=300)
-    # author = forms.CharField(max_length=20)
-    # email = forms.EmailField()

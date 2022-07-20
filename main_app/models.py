@@ -32,7 +32,7 @@ class Comment(models.Model):
     def __str__(self) -> str:
         return f"{self.course.title}|{self.body[:40]}"
     
-class event(models.Model):
+class Event(models.Model):
     picture = models.ImageField(
         upload_to='event_picture',
         default='event_picture/default.jpg')

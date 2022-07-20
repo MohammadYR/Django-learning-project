@@ -15,7 +15,7 @@ def signin(request):
         fullname = request.POST.get("fullname")
         password = request.POST.get("password")
         email = request.POST.get("email")
-        user = authenticate(email=email, password=password)
+        user = authenticate(email=email, password=password, fullname=fullname)
 
         if user:
             login(request,user)
