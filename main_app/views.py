@@ -31,7 +31,7 @@ def course(request, id):
     # return render(request, 'main_app/course.html',{})
 
 
-@login_required
+# @login_required
 def courses(request):
     if request.method == "POST":
         form = CourseForm(request.POST)
@@ -67,10 +67,20 @@ def events(request):
     events = Event.objects.all().order_by('-date')[:20]
     form = EventForm()
     return render(request,
-                  'main_app/event.html',
+                  'main_app/events.html',
                   {"events": events,
                    "form": form})
 
 def search(request):
-    return render(request, 'main_app/search.html', {})
+    # courses = Course.objects.filter(status=1)
+    # if request.method == 'GET':
+    #     #print(request.GET.get('s'))
+    #     # if s := request.GET.get('s'): #use this method only when your using python version 3.8 and above
+    #     if request.GET.get('s'):
+    #         s =  request.GET.get('s')
+    #         courses = courses.filter(content__contains=s)
+    
+    # context = {'courses':courses}
+    return render(request,'main_app/search.html',{})
+
 

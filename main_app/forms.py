@@ -15,9 +15,9 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['body']
-        widgets = {
-            'body': forms.Textarea(attrs={'cols': 10, 'rows': 10,'class':"comment-body"}),
-        }
+        # widgets = {
+        #     'body': forms.Textarea(attrs={'cols': 10, 'rows': 10,'class':"comment-body"}),
+        # }
         
     
 class EventForm(forms.ModelForm):

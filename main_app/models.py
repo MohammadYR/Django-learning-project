@@ -27,6 +27,8 @@ class Comment(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(user,on_delete=models.CASCADE)
+    approved = models.BooleanField(default=False)
+    
     
 
     def __str__(self) -> str:
