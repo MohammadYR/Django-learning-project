@@ -1,16 +1,19 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import Course,Comment,Event
-from .forms import CourseForm,CommentForm,EventForm
+from .models import Course, Comment, Event
+from .forms import CourseForm, CommentForm, EventForm
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
 # Create your views here.
 
+
 def index(request):
     return render(request, 'main_app/index.html', {})
 
+
 def index2(request):
     return render(request, 'main_app/index-2.html', {})
+
 
 @login_required(login_url='/accounts/sign-in/')
 def course(request, id):
@@ -22,12 +25,11 @@ def course(request, id):
             comment_object.Course = c
             comment_object.author = request.user
             comment_object.save()
-    
-    
-    f = Comment.objects.filter(course=c).order_by('-date')        
+
+    f = Comment.objects.filter(course=c).order_by('-date')
     form = CommentForm()
-            
-    return render(request, 'main_app/course.html', {'course': c ,'comments': f ,'form': form})
+
+    return render(request, 'main_app/course.html', {'course': c, 'comments': f, 'form': form})
     # return render(request, 'main_app/course.html',{})
 
 
@@ -44,7 +46,8 @@ def courses(request):
                   {"courses": courses,
                    "form": form})
 
-def event(request, id=id):
+
+def event(request, id):
     e = get_object_or_404(Event, id=id)
     if request.method == 'POST':
         comment = CommentForm(request.POST)
@@ -53,11 +56,12 @@ def event(request, id=id):
             comment_object.Event = e
             comment_object.author = request.user
             comment_object.save()
-    
-    f = Comment.objects.filter(event=e).order_by('-date')        
+
+    f = Comment.objects.filter(event=e).order_by('-date')
     form = CommentForm()
-            
-    return render(request, 'main_app/course.html', {'event': e ,'comments': f ,'form': form})
+
+    return render(request, 'main_app/event.html', {'event': e, 'comments': f, 'form': form})
+
 
 def events(request):
     if request.method == "POST":
@@ -71,6 +75,7 @@ def events(request):
                   {"events": events,
                    "form": form})
 
+
 def search(request):
     # courses = Course.objects.filter(status=1)
     # if request.method == 'GET':
@@ -79,8 +84,6 @@ def search(request):
     #     if request.GET.get('s'):
     #         s =  request.GET.get('s')
     #         courses = courses.filter(content__contains=s)
-    
+
     # context = {'courses':courses}
-    return render(request,'main_app/search.html',{})
-
-
+    return render(request, 'main_app/search.html', {})

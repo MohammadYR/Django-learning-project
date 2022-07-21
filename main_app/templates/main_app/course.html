@@ -34,8 +34,8 @@
 	              <a href="#">Pages</a>
 	              <div class="uk-navbar-dropdown">
 	                <ul class="uk-nav uk-navbar-dropdown-nav">
-	                  <li class="uk-active"><a href="{% url 'course' %}">Course</a></li>
-	                  <li ><a href="{% url 'event' %}">Event</a></li>
+	                  <li class="uk-active"><a href="{% url 'course' id=course.id %}">Course</a></li>
+	                  <li ><a href="{% url 'event' id=event.id %}">Event</a></li>
 	                  <li ><a href="{% url 'search' %}">Search</a></li>
 	                  <li ><a href="{% url 'sign-in' %}">Sign In</a></li>
 	                  <li ><a href="{% url 'sign-up' %}">Sign Up</a></li>
@@ -428,7 +428,7 @@
               <span>(324)</span>
             </div>
           </div>
-          <a href="{% url 'course' %}" class="uk-position-cover"></a>
+          <a href="{% url 'course' id=course.id %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -456,7 +456,7 @@
               <span>(6,650)</span>
             </div>
           </div>
-          <a href="{% url 'course' %}" class="uk-position-cover"></a>
+          <a href="{% url 'course' id=course.id %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -484,7 +484,7 @@
               <span>(6,650)</span>
             </div>
           </div>
-          <a href="{% url 'course' %}" class="uk-position-cover"></a>
+          <a href="{% url 'course' id=course.id %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -512,7 +512,7 @@
               <span>(2,350)</span>
             </div>
           </div>
-          <a href="{% url 'course' %}" class="uk-position-cover"></a>
+          <a href="{% url 'course' id=course.id %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -540,7 +540,7 @@
               <span>(6,650)</span>
             </div>
           </div>
-          <a href="{% url 'course' %}" class="uk-position-cover"></a>
+          <a href="{% url 'course' id=course.id %}" class="uk-position-cover"></a>
         </div>
       </div>
       <div>
@@ -568,7 +568,7 @@
               <span>(1,834)</span>
             </div>
           </div>
-          <a href="{% url 'course' %}" class="uk-position-cover"></a>
+          <a href="{% url 'course' id=course.id %}" class="uk-position-cover"></a>
         </div>
       </div>
     </div>
@@ -653,8 +653,8 @@
     <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-medium-top uk-text-center">
       <li ><a href="{% url 'index2' %}">Courses</a></li>
       <li ><a href="{% url 'events' %}">Events</a></li>
-      <li class="uk-active"><a href="{% url 'course' %}">Course</a></li>
-      <li ><a href="{% url 'event' %}">Event</a></li>
+      <li class="uk-active"><a href="{% url 'course' id=course.id %}">Course</a></li>
+      <li ><a href="{% url 'event' id=event.id %}">Event</a></li>
       <li ><a href="{% url 'search' %}">Search</a></li>
       <li ><a href="{% url 'sign-in' %}">Sign In</a></li>
       <li ><a href="{% url 'sign-up' %}">Sign Up</a></li>
